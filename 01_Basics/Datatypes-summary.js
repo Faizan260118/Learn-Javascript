@@ -1,9 +1,13 @@
 // Primitive
 
-// 7 type : String, Number, Boolean, null, undefined, Symbol, Bigint
+// 7 type : String, Number, Boolean, null, undefined, Symbol, BigInt
 
 const score = 100
 const scoreValue = 100
+
+// const compare = (score == scoreValue)
+// console.log(typeof compare)
+// console.log(score == scoreValue);
 
 const isLoggedIn = false
 const outsideTemp = null
@@ -12,7 +16,7 @@ let userEmail;
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id == anotherId)
+// console.log(id == anotherId)
 
 const bigNumber = 3456735242434323242n
 
@@ -30,7 +34,7 @@ const myFunction = function () {
     console.log("Hello world");
 }
 
-console.log(typeof isLoggedIn);
+// console.log(typeof outsideTemp);
 
 // Return type of variables in JavaScript
 
