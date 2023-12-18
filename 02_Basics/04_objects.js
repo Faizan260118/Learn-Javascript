@@ -1,9 +1,9 @@
 // const tinderUser = new Object()  //singleton object
 const tinderUser = {}  //non-singleton object
 
-tinderUser.id = "123abc"
-tinderUser.name = "Sammy"
-tinderUser.isLoggedIn = false
+    tinderUser.id = "123abc"
+    tinderUser.name = "Sammy"    
+    tinderUser.isLoggedIn = false
 
 // console.log(tinderUser);
 
@@ -68,11 +68,16 @@ const { courseInstructor: instructor } = course
 // console.log(courseInstructor);
 console.log(instructor);
 
+// ? JSON syntax in types of object
+
 // {
 //     "name": "faizan",
 //     "coursename": "JS in hindi",
 //     "price": "free"
 // }
+
+
+// ? JSON syntax in types of array
 
 [
     {},
