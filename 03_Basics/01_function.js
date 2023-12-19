@@ -8,14 +8,15 @@ function sayMyName() {
     console.log("N")
 }
 
-// sayMyName()
+sayMyName()
 
 // function addTwoNumbers(number1, number2){
 //     console.log(number1 + number2)
 // }
 function addTwoNumbers(number1, number2){
 
-    // let result = number1 + number2
+    let result = number1 + number2
+    console.log(result);
     // return result
     return number1 + number2
 }
@@ -52,7 +53,7 @@ function handleObject(anyObject){
     console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
 }
 
-// handleObject(user)
+handleObject(user)
 handleObject({
     username: "zara",
     price: 399
@@ -65,4 +66,4 @@ function returnSecondValue(getArray){
 }
 
 // console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 300, 400, 600]))
+console.log(returnSecondValue([200, 200, 400, 600]))
