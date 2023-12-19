@@ -2,11 +2,11 @@
 const isUserLoggedIn = true
 const temperature = 41
 
-// if ( temperature === 40){
-//     console.log("less than 50");
-// }else {
-//     console.log("temperature is greater than 50")
-// }
+if ( temperature === 40){
+    console.log("less than 50");
+}else {
+    console.log("temperature is greater than 50")
+}
 
 // console.log("execute")
 // <, >, <=, >=, ==, !=, ===
@@ -23,7 +23,7 @@ const temperature = 41
 
 // const balance = 1000
 
-// if (balance >500) console.log("test"),console.log("test2");  
+//? if (balance >500) console.log("test"),console.log("test2");   unreadable code  
 
 // if (balance < 500) {
 //     console.log("less than");
