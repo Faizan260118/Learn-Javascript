@@ -9,6 +9,7 @@
 ## project 1
 
 ```javascript
+
 console.log("faizan");
 const buttons = document.querySelectorAll(".button");
 const body = document.querySelector("body");
@@ -32,11 +33,13 @@ buttons.forEach(function (button) {
     }
   });
 });
+
 ```
 
 ## project 2
 
 ```javascript
+
 const form = document.querySelector("form");
 // this usecase will give you empty
 // const height = parseInt(document.querySelector('#height').value)
@@ -65,4 +68,5 @@ form.addEventListener("submit", function (e) {
     }
   }
 });
+
 ```
