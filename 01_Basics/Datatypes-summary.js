@@ -57,6 +57,9 @@ const myFunction = function () {
 
 //Stack (Primitive), Heap (Non-Primitive)
 
+//? Stack give copy of original reference and does not manipulate original value.
+//? Whereas in Heap directly give the original refernce and we can manipulate the original value.
+
 let myYoutubename = "faizalali"
 
 let anothername = myYoutubename
