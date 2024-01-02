@@ -50,7 +50,7 @@ const myFunction = function () {
 // Non - primitive Datatypes:-
 
 // Arrays => object
-// Function => function
+// Function => function / object function
 // Object  => object
 
 // ********************************************************************************** //
