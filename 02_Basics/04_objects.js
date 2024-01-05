@@ -68,7 +68,7 @@ const { courseInstructor: instructor } = course
 // console.log(courseInstructor);
 console.log(instructor);
 
-// ? JSON syntax in types of object
+// ? JSON API syntax in types of object
 
 // {
 //     "name": "faizan",
@@ -77,7 +77,7 @@ console.log(instructor);
 // }
 
 
-// ? JSON syntax in types of array
+// ? JSON API syntax in types of array
 
 [
     {},
