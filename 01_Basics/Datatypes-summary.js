@@ -5,7 +5,8 @@
 const score = 100
 const scoreValue = 100
 
-// const compare = (score == scoreValue)
+const compare = (score == scoreValue)
+// console.log(compare);
 // console.log(typeof compare)
 // console.log(score == scoreValue);
 
@@ -25,10 +26,22 @@ const bigNumber = 3456735242434323242n
 // Arrays, Objects, Function
 
 const heros = ["shaktiman", "naagraz", "doga"];
+//? Change element
+heros[1] = "Ironman";
+
+//? Push element
+heros.push("Thor");
+
+// console.log(heros);
+
 let myObj = {
-    name: "Fazian",
+    name: "Faizan",
     age: 22,
 }
+//? Change element 
+myObj.name = "Zara";
+
+// console.log(myObj.name);
 
 const myFunction = function () {
     console.log("Hello world");
@@ -39,6 +52,7 @@ const myFunction = function () {
 // Return type of variables in JavaScript
 
 // Primitive Datatypes:-
+
 // Number => number
 // String => string
 // Boolean => boolean
@@ -65,8 +79,11 @@ let myYoutubename = "faizalali"
 let anothername = myYoutubename
 anothername = "chaiaurcode"
 
-console.log(myYoutubename)
-console.log(anothername)
+console.log(myYoutubename === anothername);
+console.log(myYoutubename);
+console.log( typeof myYoutubename);
+console.log(anothername);
+console.log( typeof anothername);
 
 let userOne = {
     email: "user@google.com",
