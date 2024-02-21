@@ -1,9 +1,9 @@
 // const tinderUser = new Object()  //singleton object
 const tinderUser = {}  //non-singleton object
 
-    tinderUser.id = "123abc"
-    tinderUser.name = "Sammy"    
-    tinderUser.isLoggedIn = false
+tinderUser.id = "123abc"
+tinderUser.name = "Sammy"
+tinderUser.isLoggedIn = false
 
 // console.log(tinderUser);
 
@@ -46,14 +46,14 @@ const users = [
 ]
 
 users[1].email
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('name'));
-console.log(tinderUser.isPrototypeOf('name'));
+// console.log(tinderUser.hasOwnProperty('name'));
+// console.log(tinderUser.isPrototypeOf('name'));
 
 const course = {
     coursename: "JS in Hindi",
