@@ -1,4 +1,3 @@
-
 function sayMyName() {
     console.log("F")
     console.log("A")
@@ -13,7 +12,7 @@ sayMyName()
 // function addTwoNumbers(number1, number2){
 //     console.log(number1 + number2)
 // }
-function addTwoNumbers(number1, number2){
+function addTwoNumbers(number1, number2) {
 
     let result = number1 + number2
     console.log(result);
@@ -26,9 +25,9 @@ const result = addTwoNumbers(3, 5)
 // console.log("Result:", result)
 
 
-function loginUserMessage(username = "zara"){
+function loginUserMessage(username = "zara") {
     // if(username === undefined){
-    if(!username){
+    if (!username) {
         console.log("Please enter a username")
         return
     }
@@ -38,7 +37,7 @@ function loginUserMessage(username = "zara"){
 // console.log(loginUserMessage("faizan"))
 // console.log(loginUserMessage("Fazian"))
 
-function calculateCartPrice(val1, val2, ...num1){
+function calculateCartPrice(val1, val2, ...num1) {
     return num1
 }
 
@@ -49,7 +48,7 @@ const user = {
     price: 199
 }
 
-function handleObject(anyObject){
+function handleObject(anyObject) {
     console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
 }
 
@@ -61,7 +60,7 @@ handleObject({
 
 const myNewArray = [200, 300, 400, 600]
 
-function returnSecondValue(getArray){
+function returnSecondValue(getArray) {
     return getArray[1]
 }
 
