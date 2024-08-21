@@ -79,11 +79,11 @@ let myYoutubename = "faizalali"
 let anothername = myYoutubename
 anothername = "chaiaurcode"
 
-console.log(myYoutubename === anothername);
-console.log(myYoutubename);
-console.log( typeof myYoutubename);
-console.log(anothername);
-console.log( typeof anothername);
+// console.log(myYoutubename === anothername);
+// console.log(myYoutubename);
+// console.log( typeof myYoutubename);
+// console.log(anothername);
+// console.log( typeof anothername);
 
 let userOne = {
     email: "user@google.com",
@@ -96,3 +96,12 @@ userTwo.email = "faizan@google.com"
 
 console.log(userOne.email);
 console.log(userTwo.email);
+
+let heroName = ["Ironman", "Spiderman", "Batman"];
+
+let heroName2 = heroName;
+heroName2[1] = "Thor";
+
+console.log(heroName);
+console.log(heroName2);
+
