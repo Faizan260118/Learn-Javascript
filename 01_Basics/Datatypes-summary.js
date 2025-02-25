@@ -20,6 +20,8 @@ const anotherId = Symbol('123')
 // console.log(id == anotherId)
 
 const bigNumber = 3456735242434323242n
+console.log(bigNumber);
+console.log(typeof(bigNumber));
 
 // Reference type (Non Primitive)
 
