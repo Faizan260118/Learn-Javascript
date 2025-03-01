@@ -26,3 +26,9 @@ let score2 = 200
 let score3 = 300
 
 console.log(Array.of(score1, score2, score3));
+
+let car1 = "Saab";
+let car2 = "Volvo";
+let car3 = "BMW";
+
+console.log(Array.of(car1, car2, car3))
