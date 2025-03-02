@@ -63,6 +63,7 @@ const course = {
 
 // course.courseInstructor
 
+//? Object destructure
 const { courseInstructor: instructor } = course
 
 // console.log(courseInstructor);
