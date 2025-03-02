@@ -69,6 +69,19 @@ const { courseInstructor: instructor } = course
 // console.log(courseInstructor);
 console.log(instructor);
 
+const course2 = {
+	platform: "Acadlearn'er",
+	language: "Javascript",
+	instructor: "Faizan",
+	price: 3999,
+}
+
+const {instructor : tutor, platform : online, price : fees} = course2;
+
+console.log(tutor);
+console.log(online);
+console.log(fees);
+
 // ? JSON API syntax in types of object
 
 // {
