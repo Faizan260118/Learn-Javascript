@@ -41,22 +41,26 @@ function calculateCartPrice(val1, val2, ...num1) {
     return num1
 }
 
-// console.log(calculateCartPrice(200, 400, 500, 1000))
+console.log(calculateCartPrice(200, 400, 500, 1000, 2000))
 
 const user = {
     username: "faizan",
-    price: 199
+    price: 199,
+    items: 2
 }
 
 function handleObject(anyObject) {
-    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+    // console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+    return `Username is ${anyObject.username} and price is ${anyObject.price} and total items is ${anyObject.items}`
 }
 
 // handleObject(user)
-handleObject({
+console.log(handleObject(user));
+console.log(handleObject({
     username: "zara",
-    price: 399
-})
+    price: 399,
+    items: 5,
+}))
 
 const myNewArray = [200, 300, 400, 600]
 
