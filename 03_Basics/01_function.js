@@ -69,4 +69,13 @@ function returnSecondValue(getArray) {
 }
 
 // console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 200, 400, 600]))
+console.log(returnSecondValue([200, 200, 400, 600]));
+
+const newArr = ["Sania", "Faizan", "Zara"];
+
+function returnNewArrValue(getArray){
+    return getArray[2]
+}
+
+console.log(returnNewArrValue(newArr));
+console.log(returnNewArrValue(["Physics", "Algebra", "Statistics"]));
