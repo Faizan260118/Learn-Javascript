@@ -18,6 +18,8 @@ const user = {
 // function chai(){
 //     let username = "faizan"
 //     console.log(this.username);
+//     console.log(this);
+    
 // }
 
 // chai()
@@ -32,7 +34,7 @@ const chai = () => {
     console.log(this)
 }
 
-// chai()
+chai()
 
 // const addTwo = (num1, num2) => {
 //     return num1 + num2
