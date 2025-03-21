@@ -11,11 +11,11 @@ for (let i = 0; i <= 10; i++) {
 
 // console.log(element);
 
-for (let i = 0; i <= 10; i++) {
+for (let i = 1; i <= 10; i++) {
     // console.log(`Outer loop value: ${i}`);
-    for (let j = 0; j <= 10; j++) {
+    for (let j = 1; j <= 10; j++) {
         // console.log(`Inner loop value ${j} and inner loop ${i}`);
-        // console.log(i + '*' + j + ' = ' + i*j);
+        // console.log(i + ' * ' + j + ' = ' + i*j);
     }
     
 }
@@ -40,9 +40,25 @@ for (let index = 0; index < myArray.length; index++) {
 
 for (let index = 1; index <= 20; index++) {
     if (index == 5) {
-        console.log(`Detected 5`);
+        // console.log(`Detected 5`);
         continue
     }
-    console.log(`value of i is ${index}`);
+    // console.log(`value of i is ${index}`);
     
+}
+
+for (let i = 2; i == 2; i++) {
+    for (let j = 1; j <= 10; j++) {
+
+        // if(`${i*j}` == 10){
+        //     console.log(`10 detected`); //! Does not console 10 after 8 stop execution
+        //     break
+        // }
+        console.log(`${i} * ${j} = ${i * j}`);
+
+        if(`${i*j}` == 10){
+            console.log(`10 detected`); //! Console 10 then break the execution
+            break
+        }
+    }
 }

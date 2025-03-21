@@ -28,12 +28,12 @@ const myCoding = [
         languageFileName: "py",
     },
     {
-        languageName: "java",
-        languageFileName: "java",
+        languageName: "typescript",
+        languageFileName: "ty",
     },
 ]
 
 myCoding.forEach( (item, index, arr) => {
-
+    console.log(item, index, arr);
     console.log(item.languageFileName);
 })

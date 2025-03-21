@@ -11,7 +11,11 @@ for (const num of arr) {
 
 const greetings = "Hello world"
 for (const greet of greetings) {
+    if(greet == " "){
+        break
+    }
     // console.log(`Each char is ${greet}`);
+    // console.log(`Each char is ${greetings.length}`);
 }
 
 //Maps
@@ -21,7 +25,7 @@ map.set('IN', "India")
 map.set('USA', "United States of America")
 map.set('FR', "France")
 
-console.log(map);
+// console.log(map);
 
 for (const [key, value] of map) {
     console.log(key, ':-', value);
@@ -33,5 +37,19 @@ const myObject = {
 }
 
 // for (const [key, value] of myObject) {
-//     console.log(key, ':-', value)
+//     console.log(key, ':-', value) //! myObject is not iterable
 // }
+
+//? How to Access Object Keys and Values with for...of
+
+for (const key of Object.keys(myObject)){
+    console.log(key);
+};
+
+for (const value of Object.values(myObject)){
+    console.log(value);
+};
+
+for (const [key, value] of Object.entries(myObject)) {
+    console.log(`${key}: ${value}`);
+};
