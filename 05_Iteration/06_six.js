@@ -43,3 +43,14 @@ userBooks = books.filter((bk) => {
     return bk.publish >= 1995 && bk.genre === "History"
 })
 console.log(userBooks);
+
+const newBook = books.filter((bk) => bk.genre === "Science");
+console.log(newBook);
+
+let name = ["Sania", "Faizan", "Zara", "Sahil"];
+
+let printName = name.map((username) => {
+    return "Hello " + username;
+    // return username + 10;
+})
+console.log(printName);

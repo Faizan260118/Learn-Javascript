@@ -29,4 +29,32 @@ const shoppingCart = [
 ]
 const priceToPay = shoppingCart.reduce( (acc, item) => acc + item.price, 0)
 
-console.log(priceToPay)
+console.log(priceToPay);
+
+const cart = [
+    {
+        name: "Blinkit",
+        profit: 50500
+    },
+    {
+        name: "Zepto",
+        profit: 58930
+    },
+    {
+        name: "Instamart",
+        profit: 66000
+    },
+    {
+        name: "Flipkart",
+        profit: 22100
+    },
+    {
+        name: "Amazon",
+        profit: 33990
+    }
+]
+const cartTotal = cart.reduce((acc,currval) => {
+    console.log(`acc: ${acc} and currval: ${currval.profit}`)
+    return acc + currval.profit;
+}, 0);
+console.log(cartTotal);
