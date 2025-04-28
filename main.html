@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Number Guessing Game</title>
     <style>
         body {
@@ -74,7 +74,7 @@
             display: inline-block;
             margin: 5px;
             padding: 8px 12px;
-            background-color: #f0f0f0
+            background-color: #f0f0f0;
         }
 
         /* Add the firecracker animation */
@@ -82,21 +82,38 @@
             0% {
                 transform: scale(1);
                 opacity: 1;
+                box-shadow: 0 0 10px 5px yellow;
             }
 
             50% {
-                transform: scale(1.2);
+                transform: scale(1.5);
                 opacity: 0.7;
+                box-shadow: 0 0 20px 10px orange;
             }
 
             100% {
                 transform: scale(1);
                 opacity: 1;
+                box-shadow: 0 0 10px 5px yellow;
             }
         }
 
         .container.firecracker {
-            animation: firecracker 0.5s ease-in-out;
+            animation: firecracker 1.5s ease-in-out;
+            animation-fill-mode: both;
+            /* <== This keeps the effect visible during animation */
+        }
+
+        .success{
+            color: green;
+        }
+
+        .failure{
+            color: red;
+        }
+
+        .hint{
+            color: orange;
         }
     </style>
 </head>
@@ -105,12 +122,14 @@
     <div class="container">
         <h1>Number Guessing Game</h1>
         <p>Guess a number between 1 and 100:</p>
-        <input type="number" id="userGuess" min="1" max="100">
+        <input type="number" id="userGuess" min="1" max="100" />
         <button id="submitBtn" onclick="checkGuess()">Submit Guess</button>
         <div id="guessList"></div>
         <p id="message"></p>
         <div id="attempts"></div>
-        <button id="restartBtn" onclick="restartGame()" style="display: none;">Restart Game</button>
+        <button id="restartBtn" onclick="restartGame()" style="display: none">
+            Restart Game
+        </button>
     </div>
     <script>
         let secretNumber;
@@ -123,18 +142,18 @@
             attemptsLeft = 10;
             attemptsHistory = [];
             updateAttemptsDisplay();
-            guessListElement = document.getElementById('guessList');
-            guessListElement.innerHTML = '';
-            document.getElementById('restartBtn').style.display = 'none';
+            guessListElement = document.getElementById("guessList");
+            guessListElement.innerHTML = "";
+            document.getElementById("restartBtn").style.display = "none";
             enableInputAndButton();
         }
 
         function checkGuess() {
-            const userGuessInput = document.getElementById('userGuess');
+            const userGuessInput = document.getElementById("userGuess");
             const userGuess = parseInt(userGuessInput.value);
 
             if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
-                alert('Please enter a valid number between 1 and 100.');
+                alert("Please enter a valid number between 1 and 100.");
                 return;
             }
 
@@ -148,76 +167,107 @@
             updateGuessList();
 
             if (userGuess === secretNumber) {
-                displayMessage(`Congratulations! You guessed the correct number: ${secretNumber}`, 'success');
+                displayMessage(
+                    `Congratulations! You guessed the correct number: ${secretNumber}`,
+                    "success"
+                );
                 playFirecrackerAnimation(); // Trigger firecracker animation
                 endGame();
             } else if (attemptsLeft === 0) {
-                displayMessage(`Game over! The correct number was: ${secretNumber}`, 'failure');
+                displayMessage(
+                    `Game over! The correct number was: ${secretNumber}`,
+                    "failure"
+                );
                 endGame();
             } else {
-                const hint = userGuess < secretNumber ? 'Try a higher number.' : 'Try a lower number.';
-                displayMessage(`Incorrect! ${hint}`, 'hint');
+                const hint =
+                    userGuess < secretNumber
+                        ? "Try a higher number."
+                        : "Try a lower number.";
+                displayMessage(`Incorrect! ${hint}`, "hint");
             }
 
-            document.getElementById('userGuess').value = ''; // Reset the input box
+            document.getElementById("userGuess").value = ""; // Reset the input box
         }
 
         function updateAttemptsDisplay() {
-            document.getElementById('attempts').innerText = `Attempts left: ${attemptsLeft}`;
+            document.getElementById(
+                "attempts"
+            ).innerText = `Attempts left: ${attemptsLeft}`;
         }
 
         function updateGuessList() {
-            guessListElement.innerHTML = '';
-            const guessListItems = attemptsHistory.map(guess => `<span class="guess-item">${guess}</span>`).join('');
+            guessListElement.innerHTML = "";
+            const guessListItems = attemptsHistory
+                .map((guess) => `<span class="guess-item">${guess}</span>`)
+                .join("");
             guessListElement.innerHTML = `Your guesses: ${guessListItems}`;
         }
 
         function displayMessage(message, type) {
-            const messageElement = document.getElementById('message');
+            const messageElement = document.getElementById("message");
             messageElement.innerText = message;
             messageElement.className = type;
         }
 
         function endGame() {
             disableInputAndButton();
-            document.getElementById('restartBtn').style.display = 'block';
-            document.getElementById('restartBtn').innerText = 'Restart Game';
+            document.getElementById("restartBtn").style.display = "block";
+            document.getElementById("restartBtn").innerText = "Restart Game";
         }
+
+        // displayMessage is the MACHINE.  <-- (FUNCTION / MACHINE)
+        // - messageElement is the PAPER inside the machine.  <-- (ELEMENT inside function)
+
+        // ❌ You cannot do: displayMessage.innerText
+        // ✅ You should do: displayMessage("new text", "className") 
+        // or directly update: document.getElementById('message').innerText
 
         function restartGame() {
             startGame();
-            document.getElementById('restartBtn').style.display = 'none';
+            document.getElementById("message").innerText = ""; // I can use below one also
+            document.getElementById("message").className = ""; // Not mandatory to write className type because message text is empty
+            // displayMessage("","");
+            document.getElementById("restartBtn").style.display = "none";
         }
 
         function disableInputAndButton() {
-            document.getElementById('userGuess').disabled = true;
-            document.getElementById('submitBtn').disabled = true;
+            document.getElementById("userGuess").disabled = true;
+            document.getElementById("submitBtn").disabled = true;
         }
 
         function enableInputAndButton() {
-            document.getElementById('userGuess').disabled = false;
-            document.getElementById('submitBtn').disabled = false;
+            document.getElementById("userGuess").disabled = false;
+            document.getElementById("submitBtn").disabled = false;
         }
 
+        // function playFirecrackerAnimation() {
+        //     const container = document.querySelector('.container');
+        //     container.classList.add('firecracker'); // Add the firecracker class
+        //     setTimeout(() => {
+        //         container.classList.remove('firecracker'); // Remove the firecracker class after animation
+        //     }, 500); // Adjust this timing to match the animation duration
+        // }
+
         function playFirecrackerAnimation() {
-            const container = document.querySelector('.container');
-            container.classList.add('firecracker'); // Add the firecracker class
+            const container = document.querySelector(".container");
+            container.classList.add("firecracker");
             setTimeout(() => {
-                container.classList.remove('firecracker'); // Remove the firecracker class after animation
-            }, 500); // Adjust this timing to match the animation duration
+                container.classList.remove("firecracker");
+            }, 1500); // 1.5 second, matches animation duration
         }
 
         // Listen for "Enter" key press event
-        document.getElementById('userGuess').addEventListener('keyup', function (event) {
-            if (event.key === 'Enter') {
-                checkGuess();
-            }
-        });
+        document
+            .getElementById("userGuess")
+            .addEventListener("keyup", function (event) {
+                if (event.key === "Enter") {
+                    checkGuess();
+                }
+            });
 
         // Start the game when the page loads
         window.onload = startGame;
-
-
     </script>
 </body>
 
