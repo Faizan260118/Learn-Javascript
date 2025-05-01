@@ -11,6 +11,7 @@
     <h1>Chai aur JAvascript</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
+    <p id="text"></p>
 </body>
 <script>
 
@@ -29,26 +30,49 @@
     //     })
     // })
 
-    // AI version code
-    let intervalId = null;
-    const date = new Date();
+    // AI version code arrow function code
+    // let intervalId = null;
+    // const date = new Date();
 
-    function showDate(str){
-        console.log(str, date.toLocaleString());
-    };
+    // function showDate(str){
+    //     console.log(str, date.toLocaleString());
+    // };
 
+    // const startButton = document.querySelector('#start');
+    // const stopButton = document.querySelector('#stop');
+
+    // startButton.addEventListener("click", () => {
+    //     if(intervalId) return;
+    //         intervalId = setInterval(showDate, 2000, "Faizan")
+    // });
+
+    // stopButton.addEventListener("click", () => {
+    //     clearInterval(intervalId);
+    //     intervalId = null;
+    // })
+
+    // named function code
     const startButton = document.querySelector('#start');
     const stopButton = document.querySelector('#stop');
 
-    startButton.addEventListener("click", () => {
-        if(intervalId) return;
-            intervalId = setInterval(showDate, 2000, "Faizan")
-    });
+    function showDate(str) {
+        console.log(str, new Date().toLocaleString());
+    };
 
-    stopButton.addEventListener("click", () => {
+    let intervalId;
+
+    function startInterval() {
+        if (intervalId) return;
+        intervalId = setInterval(showDate, 1000, "Hi date:-");
+    };
+
+    function stopInterval() {
         clearInterval(intervalId);
         intervalId = null;
-    })
+    };
+
+    startButton.addEventListener("click", startInterval);
+    stopButton.addEventListener("click", stopInterval);
 
     /*
 ==========================
